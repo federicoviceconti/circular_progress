@@ -7,13 +7,22 @@ void main() {
 }
 
 void _buildHasChildTest() {
-  var textInWidget = "100%";
+  var progress = 80.0;
+  var textInWidget = "$progress%";
   var child = Text(textInWidget);
 
   testWidgets("Has child in progress", (WidgetTester tester) async {
     await tester.pumpWidget(
       MaterialApp(
-        home: CircularIndicatorWidget(child: child),
+        home: ArcIndicatorWidget(
+          height: 200.0,
+          width: 200.0,
+          currentProgress: progress,
+          backgroundColor: Colors.black,
+          progressColor: Colors.red,
+          strokeWidth: 10.0,
+          child: child
+        ),
       )
     );
 
