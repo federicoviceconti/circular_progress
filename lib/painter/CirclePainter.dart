@@ -5,19 +5,27 @@ import 'package:flutter/material.dart';
 
 class CirclePainter extends CustomPainter {
   final double currentProgress;
+  final double strokeWidth;
+  final Color progressColor;
+  final Color backgroundColor;
 
-  const CirclePainter({ this.currentProgress });
+  const CirclePainter({
+    this.currentProgress,
+    this.backgroundColor,
+    this.progressColor,
+    this.strokeWidth
+  });
 
   @override
   void paint(Canvas canvas, Size size) {
     var outer = Paint()
-      ..color = Colors.black
-      ..strokeWidth = 7
+      ..color = backgroundColor
+      ..strokeWidth = strokeWidth
       ..style = PaintingStyle.stroke;
 
     var completeArc = Paint()
-      ..color = Colors.redAccent
-      ..strokeWidth = 7
+      ..color = this.progressColor
+      ..strokeWidth = strokeWidth
       ..style = PaintingStyle.stroke
       ..strokeCap = StrokeCap.round;
 
@@ -42,8 +50,7 @@ class CirclePainter extends CustomPainter {
 
   @override
   bool shouldRepaint(CustomPainter oldDelegate) {
-    // TODO: implement shouldRepaint
-    throw UnimplementedError();
+    return this != oldDelegate;
   }
 
 }

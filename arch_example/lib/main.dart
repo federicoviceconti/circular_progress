@@ -18,9 +18,12 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(title: Text("Arch indicator")),
         body: Center(
           child: ArchProgressIndicatorWidget(
-            width: 200,
-            height: 200,
+            width: 150,
+            height: 150,
             currentProgress: progress,
+            backgroundColor: Colors.black,
+            progressColor: Colors.redAccent,
+            strokeWidth: 7,
             child: Center(
               child: Text(
                 "${progress.toInt()}%",

@@ -6,13 +6,19 @@ class ArchProgressIndicatorWidget extends StatelessWidget {
   final double height;
   final double width;
   final double currentProgress;
+  final double strokeWidth;
+  final Color progressColor;
+  final Color backgroundColor;
 
   const ArchProgressIndicatorWidget({
     Key key,
     this.child,
     this.height,
     this.width,
-    this.currentProgress
+    this.currentProgress,
+    this.strokeWidth,
+    this.progressColor,
+    this.backgroundColor
   }) : super(key: key);
 
   @override
@@ -20,7 +26,10 @@ class ArchProgressIndicatorWidget extends StatelessWidget {
     return Container(
       child: CustomPaint(
         foregroundPainter: CirclePainter(
-            currentProgress: this.currentProgress
+          currentProgress: this.currentProgress,
+          backgroundColor: this.backgroundColor,
+          progressColor: this.progressColor,
+          strokeWidth: this.strokeWidth
         ),
         child: Container(
           height: height,
