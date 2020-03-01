@@ -2,8 +2,8 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:arch_progress/painter/base_painter.dart';
 
-class ArchPainter extends BasePainter {
-  const ArchPainter({
+class ArcPainter extends BasePainter {
+  const ArcPainter({
     currentProgress,
     backgroundColor,
     progressColor,

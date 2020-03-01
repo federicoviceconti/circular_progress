@@ -1,7 +1,7 @@
 # arch_progress
 
-Arch progress indicator for Flutter.
+Circular and arc progress indicator for Flutter.
 
 ## Getting Started
 
-![arch_example](screenshot/image.png)
+![arc_example](screenshot/image.png)

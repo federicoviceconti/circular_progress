@@ -1,4 +1,4 @@
-import 'package:arch_progress/arch_progress.dart';
+import 'package:arch_progress/circular_progress.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 

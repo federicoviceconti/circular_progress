@@ -1,9 +1,9 @@
-import 'package:arch_progress/painter/arch_painter.dart';
+import 'package:arch_progress/painter/arc_painter.dart';
 import 'package:arch_progress/widget/base_widget.dart';
 import 'package:flutter/material.dart';
 
-class ArchIndicatorWidget extends BaseWidget {
-  const ArchIndicatorWidget({Key key, child,
+class ArcIndicatorWidget extends BaseWidget {
+  const ArcIndicatorWidget({Key key, child,
     height,
     width,
     currentProgress,
@@ -23,7 +23,7 @@ class ArchIndicatorWidget extends BaseWidget {
   Widget build(BuildContext context) {
     return Container(
       child: CustomPaint(
-        foregroundPainter: ArchPainter(
+        foregroundPainter: ArcPainter(
             currentProgress: this.currentProgress,
             backgroundColor: this.backgroundColor,
             progressColor: this.progressColor,

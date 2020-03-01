@@ -1,5 +1,5 @@
-import 'package:arch_progress/arch_progress.dart';
-import 'package:arch_progress/widget/arch_indicator_widget.dart';
+import 'package:arch_progress/circular_progress.dart';
+import 'package:arch_progress/widget/arc_indicator_widget.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -50,7 +50,7 @@ class MyApp extends StatelessWidget {
               children: <Widget>[
                 Text("ArcIndicatorWidget"),
                 SizedBox(height: 20),
-                ArchIndicatorWidget(
+                ArcIndicatorWidget(
                   width: 150.0,
                   height: 150.0,
                   currentProgress: progress,
