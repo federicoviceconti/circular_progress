@@ -1,20 +1,26 @@
 import 'dart:math' as math;
 
+import 'package:arch_progress/painter/base_painter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class CirclePainter extends CustomPainter {
+class CircularPainter extends BasePainter {
   final double currentProgress;
   final double strokeWidth;
   final Color progressColor;
   final Color backgroundColor;
 
-  const CirclePainter({
+  const CircularPainter({
     this.currentProgress,
     this.backgroundColor,
     this.progressColor,
     this.strokeWidth
-  });
+  }): super(
+      currentProgress: currentProgress,
+      backgroundColor: backgroundColor,
+      progressColor: progressColor,
+      strokeWidth: strokeWidth
+  );
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -30,7 +36,7 @@ class CirclePainter extends CustomPainter {
       ..strokeCap = StrokeCap.round;
 
     var offset = Offset(size.width / 2, size.height / 2);
-    var radius = math.min(size.width / 2, size.height / 2) - 7;
+    var radius = math.min(size.width / 2, size.height / 2);
 
     canvas.drawCircle(offset, radius, outer);
 
@@ -47,10 +53,4 @@ class CirclePainter extends CustomPainter {
         completeArc
     );
   }
-
-  @override
-  bool shouldRepaint(CustomPainter oldDelegate) {
-    return this != oldDelegate;
-  }
-
 }

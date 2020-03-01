@@ -13,7 +13,7 @@ void _buildHasChildTest() {
   testWidgets("Has child in progress", (WidgetTester tester) async {
     await tester.pumpWidget(
       MaterialApp(
-        home: ArchProgressIndicatorWidget(child: child),
+        home: CircularIndicatorWidget(child: child),
       )
     );
 
