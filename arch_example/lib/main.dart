@@ -7,6 +7,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    var progress = 80.0;
+
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -18,9 +20,15 @@ class MyApp extends StatelessWidget {
           child: ArchProgressIndicatorWidget(
             width: 200,
             height: 200,
-            currentProgress: 80,
+            currentProgress: progress,
             child: Center(
-              child: Text("100%")
+              child: Text(
+                "${progress.toInt()}%",
+                style: TextStyle(
+                  fontWeight: FontWeight.w500,
+                  fontSize: 22
+                ),
+              )
             ),
           ),
         ),
